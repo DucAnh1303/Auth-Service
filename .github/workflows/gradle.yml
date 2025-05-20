@@ -36,7 +36,7 @@ jobs:
         context: .
         file: Dockerfile
         push: true
-        tags: ducanh1398/cicd-demo:v4,ducanh1398/cicd-demo:latest
+        tags: ducanh1398/cicd-demo:latest
 
 
 #

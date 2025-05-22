@@ -1,13 +1,13 @@
-package service.cicd;
+package service.auth;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CicdApplication {
+public class AuthApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CicdApplication.class, args);
+		SpringApplication.run(AuthApplication.class, args);
 	}
 
 }

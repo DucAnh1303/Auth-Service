@@ -1,10 +1,10 @@
-package service.cicd;
+package service.auth;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CicdApplicationTests {
+class AuthApplicationTests {
 
 	@Test
 	void contextLoads() {

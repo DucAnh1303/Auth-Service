@@ -8,9 +8,9 @@ env:
   AWS_REGION: us-east-1
   ECR_REPOSITORY: 139076917068.dkr.ecr.us-east-1.amazonaws.com/service/auth
   ECS_SERVICE: arn:aws:ecs:us-east-1:139076917068:service/excellent-tiger-auf7nd/auth-service-defind-service-3vsi8sh7
-  ECS_CLUSTER: ${{ secrets.ECS_CLUSTER }}
-  ECS_TASK_DEFINITION: ${{ secrets.ECS_TASK_DEFINITION }}
-  CONTAINER_NAME: ${{ secrets.CONTAINER_NAME }}
+  ECS_CLUSTER: excellent-tiger-auf7nd
+  ECS_TASK_DEFINITION: arn:aws:ecs:us-east-1:139076917068:task-definition/auth-service-defind:1
+  CONTAINER_NAME: a111
 
 
 permissions:
@@ -38,7 +38,7 @@ jobs:
       uses: aws-actions/amazon-ecr-login@v1
 
     - name: Setup Gradle
-      uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
+      uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582
 
     - name: Make Gradle Wrapper Executable
       run: chmod +x ./gradlew

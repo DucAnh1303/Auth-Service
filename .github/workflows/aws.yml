@@ -5,13 +5,13 @@ on:
     branches: [ "master" ]
 
 env:
-  AWS_REGION: us-east-1                   # set this to your preferred AWS region, e.g. us-west-1
-  ECR_REPOSITORY: 139076917068.dkr.ecr.us-east-1.amazonaws.com/service/auth        # set this to your Amazon ECR repository name
-  ECS_SERVICE: arn:aws:ecs:us-east-1:139076917068:service/excellent-tiger-auf7nd/auth-service-defind-service-3vsi8sh7                 # set this to your Amazon ECS service name
-  ECS_CLUSTER: ${{ secrets.ECS_CLUSTER }}                # set this to your Amazon ECS cluster name
-  ECS_TASK_DEFINITION: ${{ secrets.ECS_TASK_DEFINITION }}  # set this to the path to your Amazon ECS task definition # file, e.g. .aws/task-definition.json
-  CONTAINER_NAME: ${{ secrets.CONTAINER_NAME }}           # set this to the name of the container in the
-                                               # containerDefinitions section of your task definition
+  AWS_REGION: us-east-1
+  ECR_REPOSITORY: 139076917068.dkr.ecr.us-east-1.amazonaws.com/service/auth
+  ECS_SERVICE: arn:aws:ecs:us-east-1:139076917068:service/excellent-tiger-auf7nd/auth-service-defind-service-3vsi8sh7
+  ECS_CLUSTER: ${{ secrets.ECS_CLUSTER }}
+  ECS_TASK_DEFINITION: ${{ secrets.ECS_TASK_DEFINITION }}
+  CONTAINER_NAME: ${{ secrets.CONTAINER_NAME }}
+
 
 permissions:
   contents: read

@@ -6,7 +6,7 @@ on:
 
 env:
   AWS_REGION: us-east-1
-  ECR_REPOSITORY: 139076917068.dkr.ecr.us-east-1.amazonaws.com/service/auth
+  ECR_REPOSITORY: service/auth
   ECS_SERVICE: auth-service-defind-service-3vsi8sh7
   ECS_CLUSTER: excellent-tiger-auf7nd
   ECS_TASK_DEFINITION: .aws/auth-service.json

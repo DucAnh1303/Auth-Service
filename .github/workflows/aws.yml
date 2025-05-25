@@ -6,10 +6,10 @@ on:
 
 env:
   AWS_REGION: us-east-1
-  ECR_REPOSITORY: public.ecr.aws/q2n3k6x8/service/auth
-  ECS_SERVICE: arn:aws:ecs:us-east-1:139076917068:service/excellent-tiger-auf7nd/auth-service-defind-service-3vsi8sh7
+  ECR_REPOSITORY: service/auth
+  ECS_SERVICE: auth-service-defind-service-3vsi8sh7
   ECS_CLUSTER: excellent-tiger-auf7nd
-  ECS_TASK_DEFINITION: arn:aws:ecs:us-east-1:139076917068:task-definition/auth-service-defind:1
+  ECS_TASK_DEFINITION: auth-service-defind:1
   CONTAINER_NAME: a111
 
 

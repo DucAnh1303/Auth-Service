@@ -7,9 +7,10 @@
       "cpu": 0,
       "portMappings": [
         {
-          "containerPort": 80,
-          "hostPort": 80,
-          "protocol": "tcp"
+          "containerPort": 9191,
+          "hostPort": 9191,
+          "protocol": "tcp",
+          "appProtocol": "http"
         }
       ],
       "essential": true,

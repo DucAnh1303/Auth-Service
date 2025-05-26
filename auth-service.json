@@ -1,7 +1,11 @@
 {
+  "family": "auth-service",
+  "taskRoleArn": "arn:aws:iam::139076917068:role/ecsTaskExecutionRole",
+  "executionRoleArn": "arn:aws:iam::139076917068:role/ecsTaskExecutionRole",
+  "networkMode": "awsvpc",
   "containerDefinitions": [
     {
-      "name": "auth-service",
+      "name": "auth-service-container",
       "image": "139076917068.dkr.ecr.us-east-1.amazonaws.com/service/auth",
       "cpu": 0,
       "portMappings": [
@@ -13,19 +17,13 @@
           "appProtocol": "http"
         },
         {
-          "name": "9191",
+          "name": "auth_service_http",
           "containerPort": 9191,
           "hostPort": 9191,
           "protocol": "tcp",
           "appProtocol": "http"
         }
       ],
-      "essential": true,
-      "environment": [],
-      "environmentFiles": [],
-      "mountPoints": [],
-      "volumesFrom": [],
-      "ulimits": [],
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {
@@ -38,81 +36,15 @@
         },
         "secretOptions": []
       },
-      "systemControls": []
-    },
-    {
-      "name": "aws-otel-collector",
-      "image": "public.ecr.aws/aws-observability/aws-otel-collector:v0.43.2",
-      "cpu": 0,
-      "portMappings": [],
       "essential": true,
-      "command": [
-        "--config=/etc/ecs/ecs-xray.yaml"
-      ],
       "environment": [],
+      "environmentFiles": [],
       "mountPoints": [],
       "volumesFrom": [],
-      "logConfiguration": {
-        "logDriver": "awslogs",
-        "options": {
-          "awslogs-group": "/ecs/ecs-aws-otel-sidecar-collector",
-          "mode": "non-blocking",
-          "awslogs-create-group": "true",
-          "max-buffer-size": "25m",
-          "awslogs-region": "us-east-1",
-          "awslogs-stream-prefix": "ecs"
-        }
-      },
       "systemControls": []
     }
   ],
-  "family": "auth-service",
-  "taskRoleArn": "arn:aws:iam::139076917068:role/ecsTaskExecutionRole",
-  "executionRoleArn": "arn:aws:iam::139076917068:role/ecsTaskExecutionRole",
-  "networkMode": "awsvpc",
-  "revision": 5,
   "volumes": [],
-  "status": "ACTIVE",
-  "requiresAttributes": [
-    {
-      "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
-    },
-    {
-      "name": "ecs.capability.execution-role-awslogs"
-    },
-    {
-      "name": "com.amazonaws.ecs.capability.ecr-auth"
-    },
-    {
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
-    },
-    {
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.28"
-    },
-    {
-      "name": "com.amazonaws.ecs.capability.task-iam-role"
-    },
-    {
-      "name": "ecs.capability.fault-injection"
-    },
-    {
-      "name": "ecs.capability.execution-role-ecr-pull"
-    },
-    {
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
-    },
-    {
-      "name": "ecs.capability.task-eni"
-    },
-    {
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
-    }
-  ],
-  "placementConstraints": [],
-  "compatibilities": [
-    "EC2",
-    "FARGATE"
-  ],
   "requiresCompatibilities": [
     "FARGATE"
   ],

@@ -10,7 +10,7 @@ env:
   ECS_SERVICE: auth-service-defind-service-3vsi8sh7
   ECS_CLUSTER: excellent-tiger-auf7nd
   ECS_TASK_DEFINITION: auth-service.json
-  CONTAINER_NAME: auth-service
+  CONTAINER_NAME: auth-service-container
 
 
 permissions:

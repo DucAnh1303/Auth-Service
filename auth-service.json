@@ -1,5 +1,8 @@
 {
-  "taskDefinitionArn": "arn:aws:ecs:us-east-1:139076917068:task-definition/auth-service:1",
+  "family": "auth-service",
+  "networkMode": "awsvpc",
+  "taskRoleArn": "arn:aws:iam::139076917068:role/ecsTaskExecutionRole",
+  "executionRoleArn": "arn:aws:iam::139076917068:role/ecsTaskExecutionRole",
   "containerDefinitions": [
     {
       "name": "auth-container",
@@ -20,9 +23,6 @@
       "systemControls": []
     }
   ],
-  "family": "auth-service",
-  "executionRoleArn": "arn:aws:iam::139076917068:role/ecsTaskExecutionRole",
-  "networkMode": "awsvpc",
   "revision": 1,
   "volumes": [],
   "status": "ACTIVE",

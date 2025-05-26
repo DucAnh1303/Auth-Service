@@ -5,8 +5,8 @@
   "executionRoleArn": "arn:aws:iam::139076917068:role/ecsTaskExecutionRole",
   "containerDefinitions": [
     {
-      "name": "auth-container",
-      "image": "auth-service",
+      "name": "service/auth",
+      "image": "139076917068.dkr.ecr.us-east-1.amazonaws.com/service/auth",
       "cpu": 0,
       "portMappings": [
         {

@@ -121,9 +121,5 @@
   "runtimePlatform": {
     "cpuArchitecture": "X86_64",
     "operatingSystemFamily": "LINUX"
-  },
-  "registeredAt": "2025-05-26T04:14:14.578Z",
-  "registeredBy": "arn:aws:iam::139076917068:root",
-  "enableFaultInjection": true,
-  "tags": []
+  }
 }

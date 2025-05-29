@@ -1,0 +1,12 @@
+version: "3"
+services:
+  app:
+    container_name: auth-service
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    image: auth-service:latest
+    ports:
+      - "9191:9191"
+    command: ["java", "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005", "-jar", "app.jar"]
+

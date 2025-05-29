@@ -1,4 +1,5 @@
-FROM openjdk:21
+FROM openjdk:21-slim
+WORKDIR /app
+COPY build/libs/auth-service-0.0.1-SNAPSHOT.jar app.jar
 EXPOSE 9191
-ADD build/libs/auth-service-0.0.1-SNAPSHOT.jar auth-service-0.0.1-SNAPSHOT.jar
-ENTRYPOINT ["java","-jar","/auth-service-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "app.jar"]

@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: auth-service
+  namespace: auth-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: auth-service
+  template:
+    metadata:
+      labels:
+        app: auth-service
+    spec:
+      terminationGracePeriodSeconds: 20
+      containers:
+          - name: auth-service
+            image: localhost:5000/auth-service:latest
+            imagePullPolicy: IfNotPresent
+            command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "9191", "--reload"]
+            envFrom:
+              - secretRef:
+                  name: demo-secrets
+            ports:
+              - protocol: TCP
+                containerPort: 9191
